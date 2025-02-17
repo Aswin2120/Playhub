@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamer's Zone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .bg-fixed {
+      background-size: cover;
+      background-image: url(css/bg.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      height: 100%;
+      color: rgb(232, 186, 20);
+      text-align: center;
+    }
+
+    .content {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 50px 20px;
+    }
+
+    .scroll{
+      background-color: #ff4d4d;
+      border: none;
+      padding: 10px 20px;
+      color: rgb(232, 223, 223);
+      text-transform: uppercase;
+      border-radius: 5px;
+    }
+
+    .scroll:hover {
+      background-color: #e63939;
+      cursor: pointer;
+    }
+
+    img {
+      transition: transform 0.5s ease; 
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Background Section -->
+  <div class="bg-fixed d-flex align-items-center justify-content-center flex-column">
+    <div>
+      <h1 class="display-1" style="color: aliceblue;">Horror Games</h1>
+      <p class="lead">
+        These games often use atmospheric tension, dark themes, unsettling environments, and psychological or supernatural elements to create a sense of dread. The goal is to immerse players in a terrifying experience, whether through jump scares, a sense of vulnerability, or the unknown lurking in the shadows.
+      </p>
+      <button class="scroll">Scroll Down</button>
+    </div><br>
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Image with Modal Trigger -->
+        <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal">
+          <img src="horrorgame/residentevil.jpg" alt="Resident Evil" style="width: 200px; height: 200px; margin: -1%; padding-left: -10%; border: 2px solid red;">
+        </a>
+      </div>
+    </div>  
+  </div>
+
+  <!-- Modal for Image Details -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Resident Evil - Game Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <!-- Larger Image -->
+          <img src="horrorgame/residentevil.jpg" alt="Resident Evil" class="img-fluid">
+          <p>Resident Evil: A classic survival horror game series that has terrified players for decades.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
